@@ -21,9 +21,8 @@ let weather = {
   },
 };
 
-// let city = prompt("Enter a city");
-// city = city.toLowerCase();
-let city = "Lviv";
+let city = prompt("Enter a city");
+city = city.toLowerCase();
 
 if (weather[city] !== undefined) {
   let temperature = weather[city].temp;
