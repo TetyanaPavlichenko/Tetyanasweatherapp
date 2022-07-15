@@ -49,8 +49,6 @@ function search(event) {
   event.preventDefault();
   let place = document.querySelector("#search-city-input");
 
-  alert(place.value);
-
   let h2 = document.querySelector("h2");
   h2.innerHTML = `Searching for ${place.value}...`;
 
