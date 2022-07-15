@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Prompt:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/d711cc716e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Forecast</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="daily_forecast">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Daily Forecast for Lviv:</h1>
+            <p>Temperature: 
+              <strong id="val">27</strong>
+               <a href="#" id="cel">°C</a>/<a href="#" id="far">°F</a>
+             </p>
+            <p>Wind 10km/h</p>
+            <p>Humidity 45%</p>
+          
+          </div>
+          
+          <div class="col">
+            <h2>Searching for...</h2>
+            <form id = "search-form">
+              <input 
+              type = "text"
+              placeholder = "Search for a city"
+              autofocus = "on"
+               name ="city" 
+               id = "search-city-input" 
+               required />
+               
+            </form>
+            <br />
+            <p class="date">
+              Date
+            </p>
+            <form>
+              <input type="date" name="date" id="date" />
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="weekly_forecast">
+        <h3>The forecast for the next 5 days:</h3>
+        <div class="row">
+          <div class="col-sm">
+            <i class="fa-solid fa-sun"></i>
+            <p>Temperature 25 &#8451</p>
+            <p>Wind 11km/h </p>
+            <p>Humidity 47%</p>
+          </div>
+          <div class="col-sm">
+            <i class="fa-solid fa-cloud-rain"></i>
+            <p>Temperature 23 &#8451</p>
+            <p>Wind 9km/h </p>
+            <p>Humidity 70%</p>
+          </div>
+          <div class="col-sm">
+            <i class="fa-solid fa-sun"></i>
+            <p>Temperature 27 &#8451</p>
+            <p>Wind 14km/h </p>
+            <p>Humidity 40%</p>
+          </div>
+          <div class="col-sm">
+            <i class="fa-solid fa-cloud-bolt"></i>
+            <p>Temperature 24 &#8451 </p>
+            <p>Wind 8km/h </p>
+            <p>Humidity 90%</p>
+          </div>
+          <div class="col-sm">
+            <i class="fa-solid fa-cloud-rain"></i>
+            <p>Temperature 22 &#8451 </p>
+            <p>Wind 10km/h /p>
+            <p>Humidity 85%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="data.js"></script>
+  </body>
+</html>

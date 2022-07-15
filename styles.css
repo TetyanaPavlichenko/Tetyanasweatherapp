@@ -1,0 +1,48 @@
+h1,
+h2,
+h3 {
+  font-family: "PT Serif", serif;
+  color: #062c80;
+}
+p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(149, 219, 254) 0%,
+    rgb(7, 134, 197) 90.1%
+  );
+}
+input {
+  background-color: antiquewhite;
+  border: 2px outset #05205b;
+}
+span {
+  margin: 40px 100px;
+}
+.daily_forecast {
+  display: block;
+  font-weight: bold;
+  margin: auto;
+  padding: 10px;
+}
+.weekly_forecast {
+  display: block;
+  border: 2px outset #05205b;
+  margin: 20px;
+  padding: 20px;
+}
+.fa-sun {
+  color: rgba(234, 234, 67, 0.932);
+  font-size: 40px;
+}
+
+.fa-cloud-rain {
+  font-size: 40px;
+  color: #0a389b;
+}
+.fa-cloud-bolt {
+  font-size: 40px;
+  color: #05205b;
+}
