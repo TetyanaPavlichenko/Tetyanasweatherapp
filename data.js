@@ -26,7 +26,6 @@ city = city.toLowerCase();
 
 if (weather[city] !== undefined) {
   let temperature = weather[city].temp;
-  let humidity = weather[city].humidity;
   let cTemperature = Math.round(temperature);
   let fTemperature = Math.round((temperature * 9) / 5 + 32);
 
@@ -50,7 +49,10 @@ function displayWeather(response) {
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   descriptionElement.innerHTML = response.data.weather[0].description;
-  iconElement.setAttribute("src", `http://openweatherap.org/img/wn/04d@2x.png`);
+  iconElement.setAttribute(
+    "src",
+    `http://openweatherap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function search(event) {
