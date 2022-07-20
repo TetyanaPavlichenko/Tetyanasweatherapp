@@ -98,11 +98,10 @@ function celc(event) {
   temperature.innerHTML = celsiusTemperature;
 }
 
-
 function fart(event) {
   event.preventDefault();
   let temperature = document.querySelector("#val");
-   let farenhaitTemp = (celsiusTemperature * 9) / 5 + 32;
+  let farenhaitTemp = (celsiusTemperature * 9) / 5 + 32;
   temperature.innerHTML = Math.round(farenhaitTemp);
 }
 
@@ -111,5 +110,5 @@ fartemp.addEventListener("click", fart);
 
 let celtemp = document.querySelector("#cel");
 celtemp.addEventListener("click", celc);
-  
+
 let celsiusTemperature = null;
