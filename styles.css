@@ -9,7 +9,6 @@ p {
 }
 body {
   max-width: 600px;
-  border: 2px outset #05205b;
   margin: 30px auto;
   padding: 20px;
   background: radial-gradient(
@@ -30,4 +29,5 @@ span {
   font-weight: bold;
   margin: auto;
   padding: 10px;
+  border: 2px outset #05205b;
 }
