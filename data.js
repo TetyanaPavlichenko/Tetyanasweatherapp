@@ -101,8 +101,9 @@ celtemp.addEventListener("click", celc);
 
 function fart(event) {
   event.preventDefault();
-  let v2 = document.querySelector("#val");
-  v2.innerHTML = "80";
+  let farenhaitTemp = (27 * 9) / 5 + 32;
+  let temperature = document.querySelector("#val");
+  temperature.innerHTML = Math.round(farenhaitTemp);
 }
 
 let fartemp = document.querySelector("#far");
