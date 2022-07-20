@@ -30,22 +30,3 @@ span {
   margin: auto;
   padding: 10px;
 }
-.weekly_forecast {
-  display: block;
-  border: 2px outset #05205b;
-  margin: 20px;
-  padding: 20px;
-}
-.fa-sun {
-  color: rgba(234, 234, 67, 0.932);
-  font-size: 40px;
-}
-
-.fa-cloud-rain {
-  font-size: 40px;
-  color: #0a389b;
-}
-.fa-cloud-bolt {
-  font-size: 40px;
-  color: #05205b;
-}
