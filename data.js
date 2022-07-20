@@ -45,8 +45,8 @@ function displayWeather(response) {
   weatherShow.innerHTML = `${temperature}`;
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = response.data.wind.speed;
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function search(event) {
