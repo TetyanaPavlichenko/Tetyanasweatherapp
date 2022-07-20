@@ -95,7 +95,7 @@ calendar.innerHTML = `${day}  ${hours}:${minutes}`;
 function celc(event) {
   event.preventDefault();
   let temperature = document.querySelector("#val");
-  temperature.innerHTML = celsiusTemperature;
+  temperature.innerHTML = Math.round(celsiusTemperature);
 }
 
 function fart(event) {
