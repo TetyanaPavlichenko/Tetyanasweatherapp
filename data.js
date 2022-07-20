@@ -43,12 +43,14 @@ function displayWeather(response) {
   let weatherShow = document.querySelector("#val");
   let temperature = Math.round(response.data.main.temp);
   weatherShow.innerHTML = `${temperature}`;
-  let descriptionElement = document.querySelector("#description")
+  let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   descriptionElement.innerHTML = response.data.weather[0].description;
+  iconElement.setAttribute("src", `http://openweatherap.org/img/wn/04d@2x.png`);
 }
 
 function search(event) {
