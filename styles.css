@@ -32,6 +32,9 @@ input {
 span {
   margin: 40px 100px;
 }
+small{
+  top = -34px;
+}
 .daily_forecast {
   background: radial-gradient(
     circle at 10% 20%,
