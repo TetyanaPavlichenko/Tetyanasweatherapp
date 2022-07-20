@@ -26,6 +26,11 @@ body {
   margin: 30px auto;
   padding: 20px;
 }
+img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
 input {
   background-color: antiquewhite;
   border: 2px outset #05205b;
