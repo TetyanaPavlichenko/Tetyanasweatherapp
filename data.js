@@ -94,11 +94,10 @@ calendar.innerHTML = `${day}  ${hours}:${minutes}`;
 
 function celc(event) {
   event.preventDefault();
-  let v1 = document.querySelector("#val");
-  v1.innerHTML = "27";
+  let temperature = document.querySelector("#val");
+  temperature.innerHTML = celsiusTemperature;
 }
-let celtemp = document.querySelector("#cel");
-celtemp.addEventListener("click", celc);
+
 
 function fart(event) {
   event.preventDefault();
@@ -109,5 +108,8 @@ function fart(event) {
 
 let fartemp = document.querySelector("#far");
 fartemp.addEventListener("click", fart);
+
+let celtemp = document.querySelector("#cel");
+celtemp.addEventListener("click", celc);
   
 let celsiusTemperature = null;
