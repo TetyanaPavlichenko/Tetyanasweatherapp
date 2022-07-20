@@ -43,6 +43,10 @@ function displayWeather(response) {
   let weatherShow = document.querySelector("#val");
   let temperature = Math.round(response.data.main.temp);
   weatherShow.innerHTML = `${temperature}`;
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = response.data.wind.speed;
 }
 
 function search(event) {
