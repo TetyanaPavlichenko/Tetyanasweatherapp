@@ -4,6 +4,16 @@ h3 {
   font-family: "PT Serif", serif;
   color: #062c80;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
