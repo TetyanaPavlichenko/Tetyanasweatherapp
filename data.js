@@ -40,7 +40,8 @@ if (weather[city] !== undefined) {
 
 function displayWeather(response) {
   let weatherShow = document.querySelector("#val");
-  let temperature = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  let temperature = Math.round(celsiusTemperature);
   weatherShow.innerHTML = `${temperature}`;
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
@@ -101,10 +102,12 @@ celtemp.addEventListener("click", celc);
 
 function fart(event) {
   event.preventDefault();
-  let farenhaitTemp = (27 * 9) / 5 + 32;
   let temperature = document.querySelector("#val");
+   let farenhaitTemp = (celsiusTemperature * 9) / 5 + 32;
   temperature.innerHTML = Math.round(farenhaitTemp);
 }
 
 let fartemp = document.querySelector("#far");
 fartemp.addEventListener("click", fart);
+  
+let celsiusTemperature = null;
