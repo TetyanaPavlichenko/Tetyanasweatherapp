@@ -32,8 +32,8 @@ input {
 span {
   margin: 40px 100px;
 }
-small{
-  top = -34px;
+small {
+  top: -34px;
 }
 .daily_forecast {
   background: radial-gradient(
