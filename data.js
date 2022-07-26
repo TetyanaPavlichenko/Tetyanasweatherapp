@@ -81,6 +81,7 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
 }
+
 function celc(event) {
   event.preventDefault();
   let temperature = document.querySelector("#val");
