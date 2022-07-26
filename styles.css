@@ -54,7 +54,7 @@ small {
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 18px;
   opacity: 0.5;
 }
 
@@ -63,5 +63,5 @@ small {
 }
 
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 14px;
 }
