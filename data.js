@@ -1,41 +1,31 @@
-let weather = {
-  paris: {
-    temp: 19.7,
-    humidity: 80,
-  },
-  tokyo: {
-    temp: 17.3,
-    humidity: 50,
-  },
-  lisbon: {
-    temp: 30.2,
-    humidity: 20,
-  },
-  "san francisco": {
-    temp: 20.9,
-    humidity: 100,
-  },
-  oslo: {
-    temp: -5,
-    humidity: 20,
-  },
-};
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
 
-let city = prompt("Enter a city");
-city = city.toLowerCase();
+  let days = ["Thu", "Fri", "Sat", "Sun"];
 
-if (weather[city] !== undefined) {
-  let temperature = weather[city].temp;
-  let cTemperature = Math.round(temperature);
-  let fTemperature = Math.round((temperature * 9) / 5 + 32);
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+          <span class="weather-forecast-temperature-min"> 12° </span>
+        </div>
+      </div>
+  `;
+  });
 
-  alert(
-    `It is currently ${cTemperature}°C (${fTemperature}°F) in ${city} with a humidity of ${humidity}%`
-  );
-} else {
-  alert(
-    `Sorry we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}`
-  );
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
 
 function displayWeather(response) {
