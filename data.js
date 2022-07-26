@@ -1,4 +1,3 @@
-
 function displayForecast(response) {
   console.log(response.data);
   let forecast = response.data.daily;
@@ -25,18 +24,20 @@ function displayForecast(response) {
           <div class="weather-forecast-temperature-min"> ${forecastDay.temp.min}° </div>
         </div>
       </div>
-  `
-  })
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
-  
-  function getForecast(coordinates) {
+
+function getForecast(coordinates) {
   console.log(coordinates);
   let key = "5f472b7acba333cd8a035ea85a0d4d4c";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}=&appid=${key}&units=metric`;
-  console.log(apiURL);
   axios.get(apiURL).then(displayForecast);
 }
-  
+
 function displayWeather(response) {
   let weatherShow = document.querySelector("#val");
   celsiusTemperature = response.data.main.temp;
