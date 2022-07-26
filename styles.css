@@ -60,10 +60,10 @@ small {
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
-  text-align: left;
+ 
 }
 
 .weather-forecast-temperatures {
   font-size: 14px;
-  text-align: right;
+ 
 }
