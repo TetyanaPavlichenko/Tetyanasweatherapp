@@ -26,7 +26,7 @@ function displayForecast(response) {
         </div>
       </div>
   `
-  }
+  })
 }
   
   function getForecast(coordinates) {
