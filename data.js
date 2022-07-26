@@ -113,3 +113,4 @@ celtemp.addEventListener("click", celc);
 
 let celsiusTemperature = null;
 
+displayForecast();
