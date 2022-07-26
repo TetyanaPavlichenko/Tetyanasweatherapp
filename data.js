@@ -102,3 +102,4 @@ let celtemp = document.querySelector("#cel");
 celtemp.addEventListener("click", celc);
 
 let celsiusTemperature = null;
+displayForecast();
