@@ -5,32 +5,37 @@ function getForecast(coordinates) {
   console.log(apiURL);
   axios.get(apiURL).then(displayForecast);
 }
+function displayForecast(response) {
+  console.log(response.data);
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
 
+  let days = ["Thu", "Fri", "Sat", "Sun"];
 
   let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
   forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
       <div class="col-3">
+        <div class="weather-forecast-date">${day}</div>
         <div class="weather-forecast-date">${forecastDay.dt}</div>
         <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
           src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
           alt=""
           width="50"
         />
         <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temperature-max"> 18° </div> 
+          <div class="weather-forecast-temperature-min"> 12° </div>
           <div class="weather-forecast-temperature-max"> ${forecastDay.temp.max}° </div> 
           <div class="weather-forecast-temperature-min"> ${forecastDay.temp.min}° </div>
         </div>
       </div>
   `;
-  });
 
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
-}
 function displayWeather(response) {
   let weatherShow = document.querySelector("#val");
   celsiusTemperature = response.data.main.temp;
@@ -87,13 +92,6 @@ let days = [
 let day = days[now.getDay()];
 calendar.innerHTML = `${day}  ${hours}:${minutes}`;
 
-function displayForecast(response) {
-  let forecast = response.data.daily;
-  let forecastElement = document.querySelector("#forecast");
-
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-
-
 function celc(event) {
   event.preventDefault();
   let temperature = document.querySelector("#val");
@@ -114,5 +112,3 @@ let celtemp = document.querySelector("#cel");
 celtemp.addEventListener("click", celc);
 
 let celsiusTemperature = null;
-
-displayForecast();
