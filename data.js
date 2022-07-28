@@ -1,3 +1,27 @@
+let now = new Date();
+let calendar = document.querySelector("p.date");
+let hours = now.getHours();
+let minutes = now.getMinutes();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[now.getDay()];
+calendar.innerHTML = `${day}  ${hours}:${minutes}`;
+
+function formatDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
   console.log("Inside display forecast");
   debugger;
@@ -10,15 +34,21 @@ function displayForecast(response) {
       forecastHTML +
       `
       <div class="col-3">
-        <div class="weather-forecast-date">${forecastDay.dt}</div>
+        <div class="weather-forecast-date">${formatDate(forecastDay.dt)}</div>
         <img
-          src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+          src="http://openweathermap.org/img/wn/${
+            forecastDay.weather[0].icon
+          }@2x.png"
           alt=""
           width="50"
         />
         <div class="weather-forecast-temperatures">
-          <div class="weather-forecast-temperature-max"> ${forecastDay.temp.max}° </div> 
-          <div class="weather-forecast-temperature-min"> ${forecastDay.temp.min}° </div>
+          <div class="weather-forecast-temperature-max"> ${Math.round(
+            forecastDay.temp.max
+          )}° </div> 
+          <div class="weather-forecast-temperature-min"> ${Math.round(
+            forecastDay.temp.min
+          )}° </div>
         </div>
       </div>
   `;
@@ -76,22 +106,6 @@ function search(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-
-let now = new Date();
-let calendar = document.querySelector("p.date");
-let hours = now.getHours();
-let minutes = now.getMinutes();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-calendar.innerHTML = `${day}  ${hours}:${minutes}`;
 
 function celc(event) {
   event.preventDefault();
