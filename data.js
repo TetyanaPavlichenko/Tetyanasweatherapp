@@ -10,17 +10,13 @@ function displayForecast(response) {
       forecastHTML +
       `
       <div class="col-3">
-        <div class="weather-forecast-date">${day}</div>
         <div class="weather-forecast-date">${forecastDay.dt}</div>
         <img
-          src="http://openweathermap.org/img/wn/50d@2x.png"
           src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
           alt=""
           width="50"
         />
         <div class="weather-forecast-temperatures">
-          <div class="weather-forecast-temperature-max"> 18° </div> 
-          <div class="weather-forecast-temperature-min"> 12° </div>
           <div class="weather-forecast-temperature-max"> ${forecastDay.temp.max}° </div> 
           <div class="weather-forecast-temperature-min"> ${forecastDay.temp.min}° </div>
         </div>
