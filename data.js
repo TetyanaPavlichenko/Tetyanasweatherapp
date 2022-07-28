@@ -1,5 +1,6 @@
 function displayForecast(response) {
-  console.log(response.data);
+  console.log("Inside display forecast");
+  debugger;
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
@@ -34,11 +35,12 @@ function displayForecast(response) {
 function getForecast(coordinates) {
   console.log(coordinates);
   let key = "5f472b7acba333cd8a035ea85a0d4d4c";
-  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}=&appid=${key}&units=metric`;
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${key}&units=metric`;
   axios.get(apiURL).then(displayForecast);
 }
 
 function displayWeather(response) {
+  debugger;
   let weatherShow = document.querySelector("#val");
   celsiusTemperature = response.data.main.temp;
   let temperature = Math.round(celsiusTemperature);
@@ -60,6 +62,7 @@ function displayWeather(response) {
 }
 
 function search(event) {
+  debugger;
   event.preventDefault();
   let place = document.querySelector("#search-city-input");
 
