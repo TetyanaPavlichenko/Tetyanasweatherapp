@@ -109,23 +109,8 @@ function search(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-function celc(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#val");
-  temperature.innerHTML = Math.round(celsiusTemperature);
-}
 
-function fart(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#val");
-  let farenhaitTemp = (celsiusTemperature * 9) / 5 + 32;
-  temperature.innerHTML = Math.round(farenhaitTemp);
-}
 
-let fartemp = document.querySelector("#far");
-fartemp.addEventListener("click", fart);
 
-let celtemp = document.querySelector("#cel");
-celtemp.addEventListener("click", celc);
 
-let celsiusTemperature = null;
+
