@@ -23,8 +23,6 @@ function formatDate(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log("Inside display forecast");
-  debugger;
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
@@ -68,7 +66,6 @@ function getForecast(coordinates) {
 }
 
 function displayWeather(response) {
-  debugger;
   let weatherShow = document.querySelector("#val");
   celsiusTemperature = response.data.main.temp;
   let temperature = Math.round(celsiusTemperature);
@@ -90,7 +87,6 @@ function displayWeather(response) {
 }
 
 function search(event) {
-  debugger;
   event.preventDefault();
   let place = document.querySelector("#search-city-input");
 
@@ -108,9 +104,3 @@ function search(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
-
-
-
-
-
-
